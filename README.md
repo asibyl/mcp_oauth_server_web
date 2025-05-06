@@ -34,17 +34,10 @@ When the client hits the `/token` endpoint with this auth code, the server provi
 ## How to use
 
 1. Clone this repository
-2. Install the dependencies
-
-`npm install`
-
+2. Install the dependencies `npm install`
 3. Go to your Developer Settings on GitHub (under Settings) and create an OAuth app. Note the Client ID and Client Secret.
-
 4. Set the GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET environment variables in your local dev environment.
-
-5. Start the MCP Server
-
-`npx tsx server/index_streamable.ts`
+5. Start the MCP Server `npx tsx server/index_streamable.ts`
 
 
 
