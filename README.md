@@ -19,13 +19,13 @@ The flow proceeds as follows:
 
 ### Authorization
 
-As the server implements the OAuthServerProvider, the server can also receive a client requests to the `/authorize` and `/token` endpoints. 
+The server receives client requests for authorization through the `/authorize` and `/token` endpoints. These are supported through a class that implements the OAuthServerProvider.  
 
-For requests to the `/authorize` endpoint, the server:
+For requests to the `/authorize` endpoint, the server auth provider:
 1. Generates the PKCE verifier and challenge
 2. Redirects to the GitHub OAuth endpoint (GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET env variables must be set)
-3. In the callback, 
-    - uses the code returned in callback to fetches its access token from GitHub 
+3. As part of the callback, 
+    - uses the code returned in callback to fetche its access token from GitHub 
     - stores this access token along with the clientId
     - generates a new auth code and returns this to the client
 
